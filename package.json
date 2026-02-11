@@ -15,11 +15,16 @@
     "@nuxt/hints": "^1.0.0-alpha.6",
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.4.0",
+    "@primeuix/themes": "^2.0.3",
     "eslint": "^9.39.2",
     "nuxt": "^4.3.0",
+    "primevue": "^4.5.4",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
     "vue": "^3.5.27",
     "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@primevue/nuxt-module": "^4.5.4"
   }
 }
