@@ -1,6 +1,6 @@
 <template>
   <ContentWrapper>
-    <div class="text-center">
+    <div class="text-center py-8">
       <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
         Bem-vindo ao PatoLeague
       </h1>
@@ -18,4 +18,7 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'default' // Sidebar exibido em todas as páginas com este layout
+})
 </script>

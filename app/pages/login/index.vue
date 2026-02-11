@@ -1,9 +1,14 @@
 <template>
-  <ContentWrapper size="xs" container-class="flex items-center justify-center">
-    <div class="w-full space-y-8">
+  <ContentWrapper
+    size="xs"
+    :padding="false"
+    padding-class="px-4"
+    container-class="flex items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900"
+  >
+    <div class="w-full max-w-sm mx-auto space-y-8">
       <div>
-        <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white">
-          Faça login em sua conta
+        <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-600">
+          Faça login em sua conta PatoLeague
         </h2>
         <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
           Ou
@@ -12,7 +17,7 @@
           </a>
         </p>
       </div>
-      <form class="mt-8 space-y-6" @submit.prevent="handleLogin">
+      <form class="mt-8 space-y-6" @submit.prevent="onLogin">
         <div class="rounded-md shadow-sm -space-y-px">
           <div>
             <label for="email" class="sr-only">Email</label>
@@ -50,7 +55,7 @@
               name="remember-me"
               type="checkbox"
               class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
-            />
+            >
             <label for="remember-me" class="ml-2 block text-sm text-gray-900 dark:text-gray-300">
               Lembrar-me
             </label>
@@ -91,7 +96,7 @@ const form = ref({
 
 const isLoading = ref(false)
 
-const handleLogin = async () => {
+const onLogin = async () => {
   isLoading.value = true
   
   try {
